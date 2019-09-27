@@ -45,6 +45,24 @@ public class CacheConfiguration {
             createCache(cm, co.edu.ucentral.tutorias.domain.User.class.getName());
             createCache(cm, co.edu.ucentral.tutorias.domain.Authority.class.getName());
             createCache(cm, co.edu.ucentral.tutorias.domain.User.class.getName() + ".authorities");
+            createCache(cm, co.edu.ucentral.tutorias.domain.Departamento.class.getName());
+            createCache(cm, co.edu.ucentral.tutorias.domain.Departamento.class.getName() + ".programas");
+            createCache(cm, co.edu.ucentral.tutorias.domain.ProgramaAcademico.class.getName());
+            createCache(cm, co.edu.ucentral.tutorias.domain.ProgramaAcademico.class.getName() + ".materias");
+            createCache(cm, co.edu.ucentral.tutorias.domain.Materia.class.getName());
+            createCache(cm, co.edu.ucentral.tutorias.domain.Materia.class.getName() + ".horarios");
+            createCache(cm, co.edu.ucentral.tutorias.domain.Materia.class.getName() + ".tutorias");
+            createCache(cm, co.edu.ucentral.tutorias.domain.HorarioMateria.class.getName());
+            createCache(cm, co.edu.ucentral.tutorias.domain.Tutoria.class.getName());
+            createCache(cm, co.edu.ucentral.tutorias.domain.Tutoria.class.getName() + ".comentarios");
+            createCache(cm, co.edu.ucentral.tutorias.domain.Comentario.class.getName());
+            createCache(cm, co.edu.ucentral.tutorias.domain.Estudiante.class.getName());
+            createCache(cm, co.edu.ucentral.tutorias.domain.Estudiante.class.getName() + ".departamentos");
+            createCache(cm, co.edu.ucentral.tutorias.domain.Estudiante.class.getName() + ".tutorias");
+            createCache(cm, co.edu.ucentral.tutorias.domain.Profesor.class.getName());
+            createCache(cm, co.edu.ucentral.tutorias.domain.Profesor.class.getName() + ".horarios");
+            createCache(cm, co.edu.ucentral.tutorias.domain.Profesor.class.getName() + ".tutorias");
+            createCache(cm, co.edu.ucentral.tutorias.domain.Profesor.class.getName() + ".departamentos");
             // jhipster-needle-ehcache-add-entry
         };
     }

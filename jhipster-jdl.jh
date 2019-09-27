@@ -1,0 +1,100 @@
+entity Departamento {
+	nombre String,
+    decano String
+}
+
+entity ProgramaAcademico {
+	codigo String,
+	nombre String,
+    url String,
+    correo String
+}
+
+entity Materia {
+	codigo String,
+    nombre String,
+    creditos Integer
+}
+
+entity HorarioMateria{
+	horaInicio String,
+    horaFin String,
+    dia Dia
+}
+
+entity Tutoria{
+	horaInicio String,
+    horaFin String,
+    dia Dia,
+	tomada Boolean
+}
+
+entity Comentario{
+	comentarioInicial String,
+    padre String,
+	descripcion String,
+}
+
+entity Estudiante{
+	nombre String,
+    codigo String,
+    carrera String
+    genero Genero,
+}
+
+entity Profesor{
+	nombre String,
+    area String,
+    titulo String,
+    genero Genero
+}
+
+relationship OneToMany {
+	Departamento{programa} to ProgramaAcademico,
+    Materia{horario} to HorarioMateria,
+    Materia{tutoria} to Tutoria,
+    Tutoria{comentario} to Comentario,
+    Profesor{horario} to HorarioMateria,
+    Profesor{tutoria} to Tutoria,
+    Profesor{departamento} to Departamento
+    Estudiante{departamento} to ProgramaAcademico
+    Estudiante{tutoria} to Tutoria,
+    Departamento{programa} to ProgramaAcademico
+}
+
+relationship ManyToOne {
+    Profesor{user} to User,
+    Estudiante{user} to User
+    Comentario{user} to User
+}
+
+relationship ManyToMany {
+    ProgramaAcademico{materia} to Materia
+}
+
+enum Dia {
+    LUNES, MARTES, MIERCOLES, JUEVES, VIERNES, SABADO
+}
+
+enum Genero {
+    Masculino, Femenino, Indefinido
+}
+// defining multiple oneToOne relationships
+//relationship OneToOne {
+//	JobHistory{job} to Job,
+//	JobHistory{department} to Department,
+//	JobHistory{employee} to Employee
+//}
+//
+// Set pagination options
+//paginate JobHistory, Employee with infinite-scroll
+//paginate Job with pagination
+
+// Use Data Transfert Objects (DTO)
+// dto * with mapstruct
+
+// Set service options to all except few
+//service all with serviceImpl except Employee, Job
+
+// Set an angular suffix
+// angularSuffix * with mySuffix
