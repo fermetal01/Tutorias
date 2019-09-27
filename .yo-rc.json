@@ -1,0 +1,39 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "co.edu.ucentral.tutorias"
+    },
+    "jhipsterVersion": "6.3.1",
+    "applicationType": "monolith",
+    "baseName": "Tutorias",
+    "packageName": "co.edu.ucentral.tutorias",
+    "packageFolder": "co/edu/ucentral/tutorias",
+    "serverPort": "8080",
+    "authenticationType": "jwt",
+    "cacheProvider": "ehcache",
+    "enableHibernateCache": true,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "h2Disk",
+    "prodDatabaseType": "postgresql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": "eureka",
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "ZmFmZDAyMjQ0YmE3MjFhZjZlOWQ4MThjNGZkNDNiZmE4YWRmNzQ0ZWNkZGVhZTM0OGU1MWM1NDc3NGU5YzVmYjI4ZDE3M2U5NTE4NGIzMDZhNzExZmI0MTRhZWJhZjljNDJjOThkOTFkYzZjOGI3YmJjNjhhZTVkMjY4ODFjMTY=",
+    "embeddableLaunchScript": false,
+    "useSass": true,
+    "clientPackageManager": "npm",
+    "clientFramework": "react",
+    "clientTheme": "flatly",
+    "clientThemeVariant": "primary",
+    "testFrameworks": ["gatling", "cucumber", "protractor"],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": false,
+    "blueprints": []
+  }
+}

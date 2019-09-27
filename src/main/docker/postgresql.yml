@@ -1,0 +1,11 @@
+version: '2'
+services:
+  tutorias-postgresql:
+    image: postgres:11.5
+    # volumes:
+    #     - ~/volumes/jhipster/Tutorias/postgresql/:/var/lib/postgresql/data/
+    environment:
+      - POSTGRES_USER=Tutorias
+      - POSTGRES_PASSWORD=
+    ports:
+      - 5432:5432
